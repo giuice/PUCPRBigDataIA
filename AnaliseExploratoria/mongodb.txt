@@ -1,0 +1,46 @@
+
+# Trabalhando com Spark e MongoDB
+
+# Para MacOS e Linux:
+
+1- Abra o prompt de comando ou terminal e inicialize o MongoDB com o comando: mongod.
+
+
+
+# Para MacOS, Linux e Windows:
+
+2- Abra outro prompt de comando ou terminal e digite: mongo
+
+3- Visualize os bancos de dados criados com o comando: show databases;
+
+4- Digite: use test_db;
+
+5- Crie uma coleção com o comando: db.createCollection("test_collection");
+
+6- Carregue alguns dados na coleção criada:
+
+db.test_collection.insertMany([
+   { item: "Camisa Polo", qty: 25, tags: ["branco", "vermelho"], size: { h: 14, w: 21, uom: "cm" } },
+   { item: "Vestido Bordado", qty: 85, tags: ["cinza"], size: { h: 27.9, w: 35.5, uom: "cm" } },
+   { item: "Moleton", qty:45, tags: ["verde", "azul"], size: { h: 19, w: 22.85, uom: "cm" } }
+]);
+
+7-- Abra outro prompt de comando ou terminal e digite: $SPARK_HOME/bin/pyspark --packages org.mongodb.spark:mongo-spark-connector_2.12:2.4.0
+
+
+Obs:
+
+Use este comando com Apache Spark 2.4.3:
+
+$SPARK_HOME/bin/pyspark --packages org.mongodb.spark:mongo-spark-connector_2.11:2.4.0
+
+
+Use este comando com Apache Spark 2.4.2 ou inferior:
+
+$SPARK_HOME/bin/pyspark --packages org.mongodb.spark:mongo-spark-connector_2.12:2.4.0
+
+
+Dependendo de quando você fizer o download do Apache Spark, o suporte a linguagem Scala já pode ter sido atualizado e portanto você pode usar o comando $SPARK_HOME/bin/pyspark --packages org.mongodb.spark:mongo-spark-connector_2.12:2.4.0 para todos os casos.
+
+ 
+
