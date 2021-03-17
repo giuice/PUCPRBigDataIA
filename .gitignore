@@ -2,6 +2,7 @@
 *.zip
 *.tar.gz
 *.rar
+*.pdf
 *.csv*
 .vscode/*
 !.vscode/settings.json
@@ -10,3 +11,6 @@
 !.vscode/extensions.json
 .idea/*
 .ipynb_checkpoints
+*.pcap
+*.docx
+*.doc
